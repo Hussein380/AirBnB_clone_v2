@@ -1,142 +1,67 @@
-<center> <h1>HBNB - The Console</h1> </center>
+# AirBnB Clone v2
 
-This repository contains the initial stage of a student project to build a clone of the AirBnB website. This stage implements a backend interface, or console, to manage program data. Console commands allow the user to create, update, and destroy objects, as well as manage file storage. Using a system of JSON serialization/deserialization, storage is persistent between sessions.
+This project is an extension of the AirBnB Clone project, now with added functionalities, unit tests, and a MySQL backend. The goal is to implement an AirBnB-like platform where users can create, manage, and book accommodations.
 
----
+## Introduction
 
-<center><h3>Repository Contents by Project Task</h3> </center>
+The AirBnB Clone v2 project is a collaborative effort between two team members, Hussein and Garane, along with contributions from other individuals listed below. It is built using Python, MySQL, and SQLAlchemy, focusing on Object-Oriented Programming (OOP) principles, unit testing, and database management.
 
-| Tasks | Files | Description |
-| ----- | ----- | ------ |
-| 0: Authors/README File | [AUTHORS](https://github.com/justinmajetich/AirBnB_clone/blob/dev/AUTHORS) | Project authors |
-| 1: Pep8 | N/A | All code is pep8 compliant|
-| 2: Unit Testing | [/tests](https://github.com/justinmajetich/AirBnB_clone/tree/dev/tests) | All class-defining modules are unittested |
-| 3. Make BaseModel | [/models/base_model.py](https://github.com/justinmajetich/AirBnB_clone/blob/dev/models/base_model.py) | Defines a parent class to be inherited by all model classes|
-| 4. Update BaseModel w/ kwargs | [/models/base_model.py](https://github.com/justinmajetich/AirBnB_clone/blob/dev/models/base_model.py) | Add functionality to recreate an instance of a class from a dictionary representation|
-| 5. Create FileStorage class | [/models/engine/file_storage.py](https://github.com/justinmajetich/AirBnB_clone/blob/dev/models/engine/file_storage.py) [/models/_ _init_ _.py](https://github.com/justinmajetich/AirBnB_clone/blob/dev/models/__init__.py) [/models/base_model.py](https://github.com/justinmajetich/AirBnB_clone/blob/dev/models/base_model.py) | Defines a class to manage persistent file storage system|
-| 6. Console 0.0.1 | [console.py](https://github.com/justinmajetich/AirBnB_clone/blob/dev/console.py) | Add basic functionality to console program, allowing it to quit, handle empty lines and ^D |
-| 7. Console 0.1 | [console.py](https://github.com/justinmajetich/AirBnB_clone/blob/dev/console.py) | Update the console with methods allowing the user to create, destroy, show, and update stored data |
-| 8. Create User class | [console.py](https://github.com/justinmajetich/AirBnB_clone/blob/dev/console.py) [/models/engine/file_storage.py](https://github.com/justinmajetich/AirBnB_clone/blob/dev/models/engine/file_storage.py) [/models/user.py](https://github.com/justinmajetich/AirBnB_clone/blob/dev/models/user.py) | Dynamically implements a user class |
-| 9. More Classes | [/models/user.py](https://github.com/justinmajetich/AirBnB_clone/blob/dev/models/user.py) [/models/place.py](https://github.com/justinmajetich/AirBnB_clone/blob/dev/models/place.py) [/models/city.py](https://github.com/justinmajetich/AirBnB_clone/blob/dev/models/city.py) [/models/amenity.py](https://github.com/justinmajetich/AirBnB_clone/blob/dev/models/amenity.py) [/models/state.py](https://github.com/justinmajetich/AirBnB_clone/blob/dev/models/state.py) [/models/review.py](https://github.com/justinmajetich/AirBnB_clone/blob/dev/models/review.py) | Dynamically implements more classes |
-| 10. Console 1.0 | [console.py](https://github.com/justinmajetich/AirBnB_clone/blob/dev/console.py) [/models/engine/file_storage.py](https://github.com/justinmajetich/AirBnB_clone/blob/dev/models/engine/file_storage.py) | Update the console and file storage system to work dynamically with all  classes update file storage |
-<br>
-<br>
-<center> <h2>General Use</h2> </center>
+# Project Structure
 
-1. First clone this repository.
+The project is organized into several components:
 
-3. Once the repository is cloned locate the "console.py" file and run it as follows:
-```
-/AirBnB_clone$ ./console.py
-```
-4. When this command is run the following prompt should appear:
-```
-(hbnb)
-```
-5. This prompt designates you are in the "HBnB" console. There are a variety of commands available within the console program.
+- Python Scripts: Python scripts form the core of the project, implementing the backend logic, command-line interface, and database interactions.
+  
+- SQL Scripts: SQL scripts are used to set up the MySQL databases for development and testing purposes.
 
-##### Commands
-    * create - Creates an instance based on given class
+- Unit Tests: Unit tests are implemented using the `unittest` module to ensure the correctness of the codebase.
 
-    * destroy - Destroys an object based on class and UUID
+- README.md: This file provides an overview of the project, installation instructions, and other relevant details.
 
-    * show - Shows an object based on class and UUID
+# Requirements
 
-    * all - Shows all objects the program has access to, or all objects of a given class
+- Python Scripts: All Python scripts should be compatible with Python 3.8.5 and must follow certain guidelines regarding documentation, code style, and execution permissions.
 
-    * update - Updates existing attributes an object based on class name and UUID
+- Unit Tests: Unit tests must cover all functionalities of the project, ensuring that they pass without errors at any time. Additionally, the PEP8 code style should be adhered to.
 
-    * quit - Exits the program (EOF will as well)
+- SQL Scripts: SQL scripts should be compatible with MySQL 8.0 and SQLAlchemy 1.4.x. They should follow specific conventions regarding file structure, syntax, and comments.
 
+- GitHub: Each team must have a dedicated GitHub repository for the project. The repository should be well-structured and contain all necessary files and documentation.
 
-##### Alternative Syntax
-Users are able to issue a number of console command using an alternative syntax:
+## Contributors
 
-	Usage: <class_name>.<command>([<id>[name_arg value_arg]|[kwargs]])
-Advanced syntax is implemented for the following commands: 
+The following individuals have contributed to the AirBnB Clone v2 project:
 
-    * all - Shows all objects the program has access to, or all objects of a given class
+- Ezra Nobrega\<ezra.nobrega@outlook.com\>
+- Justin Majetich \<justinmajetich@gmail.com\>
 
-	* count - Return number of object instances by class
+# Project Tasks
 
-    * show - Shows an object based on class and UUID
+The project is divided into several tasks, each focusing on a specific aspect of development. These tasks include setting up the project environment, implementing unit tests, improving the command-line interface, configuring the MySQL database, and integrating SQLAlchemy for database management.
 
-	* destroy - Destroys an object based on class and UUID
+# Learning Objectives
 
-    * update - Updates existing attributes an object based on class name and UUID
+Throughout the project, team members are expected to gain knowledge and skills in various areas, including:
 
-<br>
-<br>
-<center> <h2>Examples</h2> </center>
-<h3>Primary Command Syntax</h3>
+- Unit testing implementation in a large project.
+- Understanding and using `*args` and `**kwargs`.
+- Handling named arguments in functions effectively.
+- Creating and managing a MySQL database.
+- Using SQLAlchemy to map Python classes to MySQL tables.
+- Handling two different storage engines with the same codebase.
+- Utilizing environment variables for configuration management.
 
-###### Example 0: Create an object
-Usage: create <class_name>
-```
-(hbnb) create BaseModel
-```
-```
-(hbnb) create BaseModel
-3aa5babc-efb6-4041-bfe9-3cc9727588f8
-(hbnb)                   
-```
-###### Example 1: Show an object
-Usage: show <class_name> <_id>
+## Getting Started
 
-```
-(hbnb) show BaseModel 3aa5babc-efb6-4041-bfe9-3cc9727588f8
-[BaseModel] (3aa5babc-efb6-4041-bfe9-3cc9727588f8) {'id': '3aa5babc-efb6-4041-bfe9-3cc9727588f8', 'created_at': datetime.datetime(2020, 2, 18, 14, 21, 12, 96959), 
-'updated_at': datetime.datetime(2020, 2, 18, 14, 21, 12, 96971)}
-(hbnb)  
-```
-###### Example 2: Destroy an object
-Usage: destroy <class_name> <_id>
-```
-(hbnb) destroy BaseModel 3aa5babc-efb6-4041-bfe9-3cc9727588f8
-(hbnb) show BaseModel 3aa5babc-efb6-4041-bfe9-3cc9727588f8
-** no instance found **
-(hbnb)   
-```
-###### Example 3: Update an object
-Usage: update <class_name> <_id>
-```
-(hbnb) update BaseModel b405fc64-9724-498f-b405-e4071c3d857f first_name "person"
-(hbnb) show BaseModel b405fc64-9724-498f-b405-e4071c3d857f
-[BaseModel] (b405fc64-9724-498f-b405-e4071c3d857f) {'id': 'b405fc64-9724-498f-b405-e4071c3d857f', 'created_at': datetime.datetime(2020, 2, 18, 14, 33, 45, 729889), 
-'updated_at': datetime.datetime(2020, 2, 18, 14, 33, 45, 729907), 'first_name': 'person'}
-(hbnb)
-```
-<h3>Alternative Syntax</h3>
+To get started with the project, follow these steps:
 
-###### Example 0: Show all User objects
-Usage: <class_name>.all()
-```
-(hbnb) User.all()
-["[User] (99f45908-1d17-46d1-9dd2-b7571128115b) {'updated_at': datetime.datetime(2020, 2, 19, 21, 47, 34, 92071), 'id': '99f45908-1d17-46d1-9dd2-b7571128115b', 'created_at': datetime.datetime(2020, 2, 19, 21, 47, 34, 92056)}", "[User] (98bea5de-9cb0-4d78-8a9d-c4de03521c30) {'updated_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134362), 'id': '98bea5de-9cb0-4d78-8a9d-c4de03521c30', 'created_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134343)}"]
-```
+1. Clone the project repository from [GitHub](https://github.com/your-username/AirBnB_clone_v2).
+2. Set up the MySQL databases for development and testing using the provided SQL scripts.
+3. Install any necessary dependencies using `pip install -r requirements.txt`.
+4. Execute the unit tests using `python3 -m unittest discover tests` to ensure everything is working correctly.
+5. Start exploring and extending the project as needed.
 
-###### Example 1: Destroy a User
-Usage: <class_name>.destroy(<_id>)
-```
-(hbnb) User.destroy("99f45908-1d17-46d1-9dd2-b7571128115b")
-(hbnb)
-(hbnb) User.all()
-(hbnb) ["[User] (98bea5de-9cb0-4d78-8a9d-c4de03521c30) {'updated_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134362), 'id': '98bea5de-9cb0-4d78-8a9d-c4de03521c30', 'created_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134343)}"]
-```
-###### Example 2: Update User (by attribute)
-Usage: <class_name>.update(<_id>, <attribute_name>, <attribute_value>)
-```
-(hbnb) User.update("98bea5de-9cb0-4d78-8a9d-c4de03521c30", name "Todd the Toad")
-(hbnb)
-(hbnb) User.all()
-(hbnb) ["[User] (98bea5de-9cb0-4d78-8a9d-c4de03521c30) {'updated_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134362), 'id': '98bea5de-9cb0-4d78-8a9d-c4de03521c30', 'name': 'Todd the Toad', 'created_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134343)}"]
-```
-###### Example 3: Update User (by dictionary)
-Usage: <class_name>.update(<_id>, <dictionary>)
-```
-(hbnb) User.update("98bea5de-9cb0-4d78-8a9d-c4de03521c30", {'name': 'Fred the Frog', 'age': 9})
-(hbnb)
-(hbnb) User.all()
-(hbnb) ["[User] (98bea5de-9cb0-4d78-8a9d-c4de03521c30) {'updated_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134362), 'name': 'Fred the Frog', 'age': 9, 'id': '98bea5de-9cb0-4d78-8a9d-c4de03521c30', 'created_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134343)}"]
-```
-<br>
+## Conclusion
+
+The AirBnB Clone v2 project offers a hands-on learning experience in developing a complex software system using Python, MySQL, and SQLAlchemy. By collaborating with a teammate and following best practices in software development, team members can gain valuable insights and skills that are highly applicable in the industry.
+

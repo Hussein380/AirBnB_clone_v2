@@ -120,38 +120,35 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
             return
 
-        """split the arg by spaces to seperate class name and parameters"""
-        arg_list = args.split()
+        #splitting the argument
+        split_args = args.split()
+        class_name = split_args[0]
+        params = split_args[1:]
 
-        class_name = arg_list[0]
+        #check if class exist
         if class_name not in HBNBCommand.classes:
             print("** class doesn't exist **")
             return
-        """extract parameters from the  argument list"""
-        params = {'created_at': datetime.now(), 'updated_at': datetime.now()}
-        for arg in arg_list[1:]:
-            """Split each argument by '='  to seperate key and value"""
-            key_value = arg.split('=')
-            if len(key_value) == 2:
-                key = key_value[0]
-                value = key_value[1]
 
-                """process the value based on its type """
+        #get the class and initialize a new instance
+        new_instance = HBNBCommand.classes[class_name]()
+
+        #parsing and setting parameters
+        for param in params:
+            try:
+                key, value = param.split('=')
+                #handling value syntax
                 if value.startswith('"') and value.endswith('"'):
-                    value = value[1:-1].replace('_', ' ').replace('\\"', '"')
+                    value = value[1:-1].replace('_', ' ').replace('"', '\"')
                 elif '.' in value:
-                    """ float  value"""
-                    try:
-                        value = float(value)
-                    except ValueError:
-                        continue
+                    value = float(value)
                 else:
-                    try:
-                        value = int(value)
-                    except ValueError:
-                        continue
-                params[key] = value
-        new_instance = HBNBCommand.classes[class_name](** params)
+                    value = int(value)
+                setattr(new_instance, key, value)
+            except ValueError:
+                #skipp unrecognizable parameters
+                pass
+        # Saving the instance to storage
         storage.save()
         print(new_instance.id)
 

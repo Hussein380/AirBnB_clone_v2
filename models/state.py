@@ -37,7 +37,7 @@ class State(BaseModel, Base):
         # ietrate through city instance
         for elem in lista:
             # check if city belongs  to this states
-            if elem.state_id == self.id:
+            if (elem.state_id == self.id):
                 result.append(elem)
         # Return the list of cities associated with this state
         return result

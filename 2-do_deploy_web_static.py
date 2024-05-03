@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """
 Fabric script based on the file 1-pack_web_static.py that distributes an
@@ -10,6 +9,7 @@ from os.path import exists
 
 # Define the IP addresses of the web servers
 env.hosts = ['54.89.109.87', '100.25.190.21']
+
 
 def do_deploy(archive_path):
     """
@@ -24,7 +24,7 @@ def do_deploy(archive_path):
         # Extract file name and remove extension
         file_name = archive_path.split("/")[-1]
         no_extension = file_name.split(".")[0]
-        
+
         # Define the path where the archive will be deployed
         path = "/data/web_static/releases/"
 
@@ -51,6 +51,5 @@ def do_deploy(archive_path):
         run('ln -s {}{}/ /data/web_static/current'.format(path, no_extension))
 
         return True
-    except:
+    except Exception as e:
         return False
-

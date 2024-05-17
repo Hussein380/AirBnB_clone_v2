@@ -1,5 +1,4 @@
 ---
-
 # AirBnB Clone with Flask
 
 This project is an implementation of an AirBnB clone using Flask, a Python web framework. It aims to replicate some of the functionalities of the AirBnB platform, such as listing properties, searching for accommodations, and user interactions.
@@ -63,7 +62,7 @@ To run the AirBnB Clone with Flask locally, follow these steps:
 
 The application should now be running locally at `http://127.0.0.1:5000`.
 
-## Usage
+# Usage
 
 Once the application is running, you can access it through a web browser. Here are some of the available routes:
 
@@ -74,7 +73,7 @@ Once the application is running, you can access it through a web browser. Here a
 - `/number_template/<n>`: Displays an HTML page with "Number: n".
 - `/number_odd_or_even/<n>`: Displays an HTML page with "Number: n is even|odd".
 
-## Project Structure
+# Project Structure
 
 The project follows a standard Flask application structure:
 

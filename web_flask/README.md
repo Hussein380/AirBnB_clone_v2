@@ -84,7 +84,3 @@ The project follows a standard Flask application structure:
 - `static/`: Includes static files such as CSS and JavaScript.
 - `tests/`: Includes unit tests for the application.
 
-## Contributing
-
-Contributions to the AirBnB Clone with Flask project are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
-

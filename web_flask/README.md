@@ -25,7 +25,7 @@ AirBnB Clone with Flask is a web application built with Python and Flask framewo
 - **Booking Management**: Users can book properties and manage their bookings.
 - **Admin Panel**: Admins have access to an admin panel to manage users, properties, and bookings.
 
-## Installation
+# Installation
 
 To run the AirBnB Clone with Flask locally, follow these steps:
 

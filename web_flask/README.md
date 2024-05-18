@@ -3,7 +3,7 @@
 
 This project is an implementation of an AirBnB clone using Flask, a Python web framework. It aims to replicate some of the functionalities of the AirBnB platform, such as listing properties, searching for accommodations, and user interactions.
 
-## Table of Contents
+# Table of Contents
 
 - [Introduction](#introduction)
 - [Features](#features)

@@ -19,11 +19,11 @@ AirBnB Clone with Flask is a web application built with Python and Flask framewo
 
 ## Features
 
-- **User Authentication**: Users can create accounts, log in, and log out.
-- **Property Listings**: Users can list their properties with details such as description, price, and location.
-- **Search and Filter**: Users can search for properties based on location, price range, and other criteria.
-- **Booking Management**: Users can book properties and manage their bookings.
-- **Admin Panel**: Admins have access to an admin panel to manage users, properties, and bookings.
+- User Authentication: Users can create accounts, log in, and log out.
+- Property Listings: Users can list their properties with details such as description, price, and location.
+- Search and Filter: Users can search for properties based on location, price range, and other criteria.
+- Booking Management: Users can book properties and manage their bookings.
+- Admin Panel: Admins have access to an admin panel to manage users, properties, and bookings.
 
 # Installation
 

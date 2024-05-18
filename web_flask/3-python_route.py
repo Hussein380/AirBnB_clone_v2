@@ -18,11 +18,18 @@ def display_HBNB():
     return "HBNB"
 
 
-@app.route('/python', defaults={'text': 'is cool'}, strict_slashes=False)
 @app.route('/c/<text>', strict_slashes=False)
 def display_c_text(text):
     """ displays c text"""
     return "C " + text.replace("_", " ")
+
+
+@app.route('/python', strict_slashes=False)
+@app.route('/python/<text>', strict_slashes=False)
+def display_python_is_cool(text="is cool"):
+    """ display 'python', followed by value of text
+    variable, default is is cool """
+    return "Python " + text.replace("_", " ")
 
 
 if __name__ == "__main__":

@@ -13,7 +13,7 @@ This project is an implementation of an AirBnB clone using Flask, a Python web f
 - [Contributing](#contributing)
 - [License](#license)
 
-## Introduction
+# Introduction
 
 AirBnB Clone with Flask is a web application built with Python and Flask framework. It provides a platform for users to list their properties for rent and for others to search and book accommodations. The application implements various routes and functionalities to achieve this, such as displaying listings, handling user authentication, and managing property bookings.
 

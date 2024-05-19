@@ -13,22 +13,18 @@ class State(BaseModel, Base):
     Atteributes:
         name: input name:
     """
-    # Define table name for the State class
-    if models.storage_t == "db":
-        __tablename__ = "states"
-        name = Column(String(128), nullable=False)
-        cities = relationship("City", cascade='all, delete, delete-orphan',
-                              backref="state")
-    else:
-        name = ""
+    # Define table name for: the State class
+    __tablename__ = "states"
+    name = Column(String(128), nullable=False)
+    cities = relationship("City", cascade='all, delete, delete-orphan',
+                            backref="state")
 
-    if models.storage_t != "db":
-        @property
-        # Dfine cities property to retrieve cities associated with this state
-        def cities(self):
-            city_list = []
-            all_cities = models.storage.all(City)
-            for city in all_cities.values():
-                if city.state_id == self.id:
-                    city_list.append(city)
-            return city_list
+    @property
+    # Dfine cities property to retrieve cities associated with this state
+    def cities(self):
+        city_list = []
+        all_cities = models.storage.all(City)
+        for city in all_cities.values():
+            if city.state_id == self.id:
+                city_list.append(city)
+        return city_list

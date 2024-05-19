@@ -16,6 +16,7 @@ from models.place import Place
 from models.review import Review
 from models.amenity import Amenity
 
+
 class DBStorage:
     """
     Class to manage database storage using SQLAlchemy.
@@ -26,7 +27,8 @@ class DBStorage:
 
     def __init__(self):
         """
-        Initializes the DBStorage class by creating the engine and configuring the session.
+        Initializes the DBStorage class by creating the engine and
+        configuring the session.
         """
         # Retrieve environment variables for database connection
         user = getenv("HBNB_MYSQL_USER")
@@ -45,11 +47,11 @@ class DBStorage:
 
     def all(self, cls=None):
         """
-         Query all objects from the database or query objects of a specific class.
-                 
+         Query all objects from the database or query objects of a
+         specific class.
          Args:
-                cls (str or class, optional): Class to query objects for. Defaults to None.
-                                             
+                cls (str or class, optional): Class to query objects
+                for. Defaults to None
         Returns:
                 dict: Dictionary of objects queried from the database.
         """
@@ -103,4 +105,5 @@ class DBStorage:
         self.__session = Session()
 
     def close(self):
-        self.__session.close()
+        """ call remove() method on the private session attribute"""
+        self.__session.remove()

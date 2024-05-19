@@ -92,3 +92,7 @@ class FileStorage:
             pass
         except KeyboardInterrupt:
             pass
+
+    def close(self):
+        """ def method for desearializing jSON file to objects"""
+        self.reload()

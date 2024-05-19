@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ import flask from module"""
-from flask import Flask
+from flask import Flask, render_template
 
 """ Create an instance of flask class"""
 app = Flask(__name__)
